@@ -1,0 +1,225 @@
+_type: export
+__export_format: 4
+__export_date: 2024-04-20T21:51:01.426Z
+__export_source: insomnia.desktop.app:v8.6.1
+resources:
+  - _id: req_046871c26b4046649d3a76344281ddb7
+    parentId: fld_4b28f27812754870b8f70326a55ad66c
+    modified: 1713630288795
+    created: 1713625831332
+    url: "{{url}}/product/add"
+    name: Create Product
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Milk",
+        	"description": "A gallon of milk",
+        	"price": 88.88,
+        	"status": "inactive"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713625831332
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4b28f27812754870b8f70326a55ad66c
+    parentId: wrk_851b6191f3914133b4c7593a95e6ffc9
+    modified: 1713625626289
+    created: 1713625626289
+    name: Products
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1713625626289
+    _type: request_group
+  - _id: wrk_851b6191f3914133b4c7593a95e6ffc9
+    parentId: null
+    modified: 1713593130281
+    created: 1713593130281
+    name: Singular Test
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_8224bc0ade3d466b92062172bb38a645
+    parentId: fld_4b28f27812754870b8f70326a55ad66c
+    modified: 1713649843961
+    created: 1713626091064
+    url: "{{url}}/product/update/:id"
+    name: Update Product
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"status": "inactive"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713625733855
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8a4a74d5641a40ceba6090a708d60bd7
+    parentId: fld_4b28f27812754870b8f70326a55ad66c
+    modified: 1713625821248
+    created: 1713625636378
+    url: "{{url}}/product/list"
+    name: Get Products
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713625636378
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6e31e67264de42cb9d6facaed99745f8
+    parentId: fld_e8e5ca273f1d42e4a1279b06dd7565e8
+    modified: 1713625735007
+    created: 1713593146433
+    url: "{{url}}/auth/signup"
+    name: Sign Up
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Julio",
+        	"lastName": "Garcia",
+        	"email": "jgarcia@test.com",
+        	"password": "1234"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713593146433
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e8e5ca273f1d42e4a1279b06dd7565e8
+    parentId: wrk_851b6191f3914133b4c7593a95e6ffc9
+    modified: 1713593142052
+    created: 1713593142052
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1713593142052
+    _type: request_group
+  - _id: req_4cda74158d054ccd9f578a5daa88162d
+    parentId: fld_e8e5ca273f1d42e4a1279b06dd7565e8
+    modified: 1713625740255
+    created: 1713594135291
+    url: "{{url}}/auth/signin"
+    name: Sign In
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "jgarcia@test.com",
+        	"password": "1234"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1711935767955.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_107232c230f2471ba5500ea7c8e6f69065e200b8
+    parentId: wrk_851b6191f3914133b4c7593a95e6ffc9
+    modified: 1713625712465
+    created: 1713593130283
+    name: Base Environment
+    data:
+      url: http://localhost:3000/api
+    dataPropertyOrder:
+      "&":
+        - url
+    color: null
+    isPrivate: false
+    metaSortKey: 1713593130283
+    _type: environment
+  - _id: jar_107232c230f2471ba5500ea7c8e6f69065e200b8
+    parentId: wrk_851b6191f3914133b4c7593a95e6ffc9
+    modified: 1713649023385
+    created: 1713593130285
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: env_f31c2acd56c54d2798f33f80a3acab86
+    parentId: env_107232c230f2471ba5500ea7c8e6f69065e200b8
+    modified: 1713649834809
+    created: 1713649817408
+    name: Dev Environment
+    data:
+      url: http://localhost:3000/api
+    dataPropertyOrder:
+      "&":
+        - url
+    color: "#b62020"
+    isPrivate: true
+    metaSortKey: 1713649817408
+    _type: environment
